@@ -54,9 +54,13 @@ formMessage.style.color="red";
 }
 
 });
-
+function toggleMenu() {
+  let hamburger = document.getElementById('hamburger');
+  hamburger.classList.toggle('active');
+  
+}
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger-menu");
+  const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobile-menu");
 
   hamburger.addEventListener("click", function () {

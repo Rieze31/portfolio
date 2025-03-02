@@ -244,19 +244,64 @@ background-color: #fff;
     border-color: black;
 }
 /* Hamburger Menu (Hidden on Desktop) */
-#hamburger-menu {
+#hamburger { 
   display: none;
-  flex-direction: column;
-  cursor: pointer;
+    background: none;
+    border: none;
+    width: 50px;
+    margin: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;   
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 20%;
 }
 
-.bar {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-  margin: 5px 0;
-  transition: 0.4s;
+#hamburger::after {
+    content: "";
+    position: absolute;
+    top: 12px;
 }
+
+#hamburger span, 
+#hamburger::after {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    transition: width 250ms;
+}
+
+#hamburger:hover::after {
+    width: 20%;
+}
+
+#hamburger:hover span {
+    width: 70%;
+}
+
+#hamburger.active::after {
+    width: 0;
+}
+
+#hamburger.active span {
+    background-color: red;
+    width: 50%;
+    margin-left: 22%;
+    transition: transform 300ms;
+}
+
+#hamburger.active span:nth-child(1) {
+    transform: rotate(40deg) translateY(17px) translateX(5.2px);
+}
+
+#hamburger.active span:nth-child(2) {
+    transform: rotate(-40deg) translateY(-11.5px) translateX(0px);
+}
+
 
 /* Mobile Menu (Initially Hidden) */
 #mobile-menu {
@@ -456,7 +501,7 @@ background-color: #555;
   #nav-links, #themeToggle {
     display: none;
   }
-  #hamburger-menu {
+  #hamburger {
     display: flex;
   }
   #header{
