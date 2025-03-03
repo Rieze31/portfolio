@@ -365,18 +365,16 @@ background-color: #fff;
 #about-me-container{
   margin-top: 50px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 #pic{
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 400px;
 }
 #pic img{
-  
   height: 300px;
   max-width: 350px;
 }
@@ -389,7 +387,7 @@ background-color: #fff;
 }
 #about-desc p{
   text-align: justify;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 5px;
   max-width: 450px;
 }
