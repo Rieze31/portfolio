@@ -78,6 +78,9 @@ font-size: 40px;
     margin: 0 auto; 
     
  }
+ .more-text{
+   display: none;
+ }
 .project-link{
     background-color: #fff;
     
@@ -95,10 +98,22 @@ font-size: 40px;
     width: 100%;
 }
 .project-title{
+    
     font-size: 28px;
 }
 .project-desc{
+
+  text-align: justify;
     font-size: 18px;
+}
+.read-more-btn{
+  background-color: #fff;
+color: black;
+text-decoration: underline;
+border: none;
+font-weight: bold;
+padding: 5px 0;
+cursor: pointer;
 }
 .stacks{
     display: flex;
@@ -439,6 +454,7 @@ background-color: #004fac;
 color: #fff;
 margin-top: 20px;
 }
+
 .section-title{
   color: #004fac;
 }
@@ -461,6 +477,10 @@ color: #E0E0E0;
 }
 body.dark-mode .project-desc{
   color: #E0E0E0;
+}
+body.dark-mode .read-more-btn {
+  background-color: #1C1C1C;
+  color: white;
 }
 body.dark-mode .stack-used{
   color: #fff;

@@ -67,4 +67,22 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle("active");
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  const readMoreBtns = document.querySelectorAll(".read-more-btn");
+  readMoreBtns.forEach(function(btn) {
+    const moreText = btn.previousElementSibling.querySelector(".more-text");
+    btn.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the link's default action
+      if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "inline";
+        btn.textContent = "Read Less";
+      } else {
+        moreText.style.display = "none";
+        btn.textContent = "Read More";
+      }
+    });
+  });
+});
+const date = document.getElementById("date");
 
+date.textContent = new Date();
