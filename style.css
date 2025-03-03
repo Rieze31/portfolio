@@ -518,7 +518,7 @@ body.dark-mode ul li {
 background-color: #555;
 }
 
-
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   #nav-links, #themeToggle {
     display: none;

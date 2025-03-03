@@ -54,6 +54,8 @@ formMessage.style.color="red";
 }
 
 });
+
+//Toggle Hamburger Menu on Mobile Devices
 function toggleMenu() {
   let hamburger = document.getElementById('hamburger');
   hamburger.classList.toggle('active');
@@ -67,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle("active");
   });
 });
+
+// Read More and Read Less Button For Projects
 document.addEventListener("DOMContentLoaded", function() {
   const readMoreBtns = document.querySelectorAll(".read-more-btn");
   readMoreBtns.forEach(function(btn) {
@@ -83,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+//Display Date on Footer
 const date = document.getElementById("date");
 
 date.textContent = new Date();
