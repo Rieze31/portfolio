@@ -518,21 +518,6 @@ background-color: #555;
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  #header{
-    max-width: 768px;
-  }
-  #main-page{
-    max-width: 768px;
-  }
-  #projects{
-    max-width: 768px;
-  }
-  #tech-stacks{
-    max-width: 768px;
-  }
-  #about-me {
-    max-width: 768px;
-  }
   #nav-links, #themeToggle {
     display: none;
   }
