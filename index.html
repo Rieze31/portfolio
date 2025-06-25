@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Rieze's Portfolio</title>
+  <title>Rieze Andrei Venzon | Portfolio</title>
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -138,7 +138,39 @@
         
       </div>
     </a>
-    
+    <a href="https://riezevenzon-tictactoe.vercel.app" class="project-link" target="_blank">
+      <div class="project">
+        
+        <img src="img/tictactoe.png" alt="project-image" class="project-image">
+        <h1 class="project-title">TicTacToe</h1>
+        <p class="project-desc">A fun and exciting tic-tac-toe game created in scratch using HTML, CSS and Javascript with 2 Player and V.S AI mode   
+        <span class="more-text">
+     </p>
+     <button class="read-more-btn">Read More</button>
+        <div class="stacks">
+          <p class="stack-used">HTML</p>
+          <p class="stack-used">CSS</p>
+          <p class="stack-used">JavaScript</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://riezevenzon-hangman.vercel.app/" class="project-link" target="_blank">
+      <div class="project">
+        
+        <img src="img/hangman-img.png" alt="project-image" class="project-image">
+        <h1 class="project-title">HangMan</h1>
+        <p class="project-desc">A fun and interactive game where players needs to guess the missing letter of a word
+        <span class="more-text">
+     </p>
+     <button class="read-more-btn">Read More</button>
+        <div class="stacks">
+          <p class="stack-used">HTML</p>
+          <p class="stack-used">CSS</p>
+          <p class="stack-used">JavaScript</p>
+        </div>
+        
+      </div>
+    </a>
   </div>
   <div class="container">
     <div class="tech-title">
@@ -205,27 +237,17 @@
     <!--Contact Form-->
     <div id="contact-form">
       
-      <h1 class="section-title">Contact Me</h1>
+      <h1 class="section-title">Let's Build Something Together</h1>
+      
       <section id="contact">
-        
-        
-        
-        <form id="contactForm">
-          
+        <form action="CRUD/send_message.php" method="post" class="contact-form">
           <label for="name">NAME:</label>
-          
-          <input type="text" id="name" required>
-          
+          <input type="text" name="name" placeholder="Your Name" required />
           <label for="email">EMAIL:</label>
-          
-          <input type="email" id="email" required>
-          
+          <input type="email" name="email" placeholder="Your Email" required />
           <label for="message">MESSAGE:</label>
-          
-          <textarea id="message" required></textarea>
-          
-          <button type="submit">SEND</button>
-          
+          <textarea name="message" placeholder="Share your thoughts..." required></textarea>
+          <button type="submit" class="feedback-btn">SEND</button>
         </form>
         
         <p id="formMessage"></p>
@@ -236,7 +258,7 @@
     <footer>
       
       <p>&copy; 2025 My Portfolio <br />Rieze ❤️</p>
-      <p id="date"></p>
+      
     </footer>
     <script src="script.js"></script>
 </body>
