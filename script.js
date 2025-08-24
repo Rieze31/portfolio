@@ -57,38 +57,21 @@ formMessage.style.color="red";
 
 //Toggle Hamburger Menu on Mobile Devices
 function toggleMenu() {
-  let hamburger = document.getElementById('hamburger');
-  hamburger.classList.toggle('active');
-  
+  document.getElementById('hamburger').classList.toggle('active');
+  document.getElementById('mobile-menu').classList.toggle('active');
 }
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
 
-  hamburger.addEventListener("click", function () {
-    mobileMenu.classList.toggle("active");
-  });
+// Theme toggle
+const mobileToggle = document.getElementById('mobile-on');
+
+// Load saved theme
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+  mobileToggle.checked = true;
+}
+
+// Listen for changes
+mobileToggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark-mode', mobileToggle.checked);
+  localStorage.setItem('theme', mobileToggle.checked ? 'dark' : 'light');
 });
-
-// Read More and Read Less Button For Projects
-document.addEventListener("DOMContentLoaded", function() {
-  const readMoreBtns = document.querySelectorAll(".read-more-btn");
-  readMoreBtns.forEach(function(btn) {
-    const moreText = btn.previousElementSibling.querySelector(".more-text");
-    btn.addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent the link's default action
-      if (moreText.style.display === "none" || moreText.style.display === "") {
-        moreText.style.display = "inline";
-        btn.textContent = "Read Less";
-      } else {
-        moreText.style.display = "none";
-        btn.textContent = "Read More";
-      }
-    });
-  });
-});
-
-//Display Date on Footer
-const date = document.getElementById("date");
-
-date.textContent = new Date();
